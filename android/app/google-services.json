@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624794657391",
+    "project_id": "cmsc23-pnsemillano",
+    "storage_bucket": "cmsc23-pnsemillano.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624794657391:android:c6a931a6a139cb26a8a39a",
+        "android_client_info": {
+          "package_name": "com.example.week7_networking_discussion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624794657391-cep1sushgsq7jhrk9dlbddaic0c5slqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRs1VEsVocmT2uOK4yOa0L-6lEDAjwW9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624794657391-cep1sushgsq7jhrk9dlbddaic0c5slqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
