@@ -11,9 +11,11 @@ import 'package:week7_networking_discussion/providers/todo_provider.dart';
 
 class TodoModal extends StatelessWidget {
   String type;
+  Todo? item;
+
   TextEditingController _formFieldController = TextEditingController();
 
-  TodoModal({super.key, required this.type});
+  TodoModal({super.key, required this.type, this.item});
 
   // Method to show the title of the modal depending on the functionality
   Text _buildTitle() {
@@ -32,13 +34,13 @@ class TodoModal extends StatelessWidget {
   // Method to build the content or body depending on the functionality
   Widget _buildContent(BuildContext context) {
     // Use context.read to get the last updated list of todos
-    List<Todo> todoItems = context.read<TodoListProvider>().todo;
+    //List<Todo> todoItems = context.read<TodoListProvider>().todo;
 
     switch (type) {
       case 'Delete':
         {
           return Text(
-            "Are you sure you want to delete?",
+            "Are you sure you want to delete ${item!.title}?",
           );
         }
       // Edit and add will have input field in them
@@ -54,7 +56,7 @@ class TodoModal extends StatelessWidget {
   }
 
   TextButton _dialogAction(BuildContext context) {
-    List<Todo> todoItems = context.read<TodoListProvider>().todo;
+    //  List<Todo> todoItems = context.read<TodoListProvider>().todo;
 
     return TextButton(
       onPressed: () {
@@ -84,8 +86,7 @@ class TodoModal extends StatelessWidget {
             }
           case 'Delete':
             {
-              // context.read<TodoListProvider>();
-              //.deleteTodo(todoItems[todoIndex].title);
+              context.read<TodoListProvider>().deleteTodo(item!.id!);
 
               // Remove dialog after editing
               Navigator.of(context).pop();
